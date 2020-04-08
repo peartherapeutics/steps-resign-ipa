@@ -24,7 +24,7 @@ class Resigner
 			raise 'no valid provisioning profiles found for installed certificates' unless selected_certificate_name
 
 			update_embedded_mobileprovisions(embedded_mobileprovisions, provisioning_profiles_for_bundle_ids)
-			add_swift_support_library
+			# add_swift_support_library
 			resign_ipa(selected_certificate_name)
 
 			resign_result = `codesign -v Payload/*.app 2>&1`
