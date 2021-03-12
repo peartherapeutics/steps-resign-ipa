@@ -2,14 +2,10 @@ title: Re-sign IPA
 summary: |-
   Re-sign the selected IPA with new Certificate and Provisioning Profile.
 description: |-
-  __DEPRECATED!__
-  Will be removed by: 2017.10.01
-  Please use [export-xcarchive](https://github.com/bitrise-steplib/steps-export-xcarchive) step instead.
-  
   Re-sign the selected IPA with new Certificate and Provisioning Profile.
-website: https://github.com/bitrise-steplib/steps-resign-ipa
-source_code_url: https://github.com/bitrise-steplib/steps-resign-ipa
-support_url: https://github.com/bitrise-steplib/steps-resign-ipa/issues
+website: https://github.com/peartherapeutics/steps-resign-ipa
+source_code_url: https://github.com/peartherapeutics/steps-resign-ipa
+support_url: https://github.com/peartherapeutics/steps-resign-ipa/issues
 host_os_tags:
   - "osx-10.10"
 project_type_tags:
