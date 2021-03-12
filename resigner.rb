@@ -34,10 +34,14 @@ class Resigner
 	private
 
 	def get_distribution_type_name(distribution_type)
-        #TODO this needs to be updated to handle Apple Developer certs if we switch to those
+		#TODO this needs to be updated to handle Apple Developer certs if we switch to those
+		puts "@@@ Distribution type: `#{distribution_type}`"
+
 		case distribution_type.downcase
 		when "appstore", "inhouse"
 			return 'iPhone Distribution:'
+		when "apple-development"
+			return 'Apple Development:'
 		when "development"
 			return 'iPhone Developer:'
 		else
@@ -47,6 +51,10 @@ class Resigner
 
 	def list_valid_certificate_names(distribution_type, team_id = nil)
 		distribution_type_name = get_distribution_type_name(distribution_type)
+
+		puts "@@@ distribution_type_name: `#{distribution_type_name}`"
+
+		puts "@@@ code signing: `#{security find-identity -v -p codesigning}`"
 
 		certificates = []
 		teams = []
